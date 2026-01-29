@@ -71,5 +71,13 @@
     - 状況: README のリファクタリング (Phase 7)、Git 操作ルールの厳格化 (Phase 8) を完了しました。
     - 具体的次の一手: ユーザーは GitHub Releases から `v0.1.0` (Draft) を手動で Publish して、テンプレートの初期リリースを行う予定です。
 
+## フェーズ 9: github-dev-flow の導入 [x]
+- [x] github-dev-flow スキルの導入と動作確認 [#92](https://github.com/asabon/AndroidAppTemplate/issues/92)
+
+- **Checkpoint: 2026-01-29 (完了)**
+    - 状況: github-dev-flow スキルの導入と、それに伴う既存ルール・ワークフローの整理を完了しました。サブモジュール側への貢献フローも確立し、PR マージを経て反映済みです。
+    - 具体的次の一手: なし（本セッションの目的達成）。
+
+
 
 
