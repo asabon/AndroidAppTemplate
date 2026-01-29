@@ -5,17 +5,23 @@ trigger: always_on
 # Git 操作ルール
 
 ## ブランチ命名規則
+`github-dev-flow` スキルで `gh issue develop` を使用する際、以下の規約を遵守してください。
+
 > [!IMPORTANT]
 > **名前に日本語（全角文字）の使用は絶対禁止です**
 > Issue タイトルが日本語の場合でも、**必ず英語に翻訳**してケバブケースにしてください。
-> また、gh issue develop を使用する際は、Issue タイトルが日本語であれば必ず \--name\ フラグで英語のブランチ名を指定してください。
+> `--name` フラグで以下の形式を指定してください。
 
-- **形式**: [Issue番号]-kebab-case-description
+- **形式**: `[Issue番号]-kebab-case-description`
 - **例**:
-  - OK: 86-update-git-rules
-  - OK: 88-separate-readme (元タイトル: テンプレート説明用 README の分離)
-  - **NG**: 88-readme-の分離 (日本語が含まれている)
-  - **NG**: 88-update-rules (Issue番号がない)
+  - OK: `86-update-git-rules`
+  - OK: `88-separate-readme` (元タイトル: テンプレート説明用 README の分離)
+  - **NG**: `88-readme-の分離` (日本語が含まれている)
+  - **NG**: `update-rules` (Issue番号がない)
+
+- **サブモジュールの修正**:
+  - サブモジュール（スキル等）に修正が必要な場合は、直接 `main` ブランチを編集してはいけません。
+  - 必ず対象サブモジュールの直下にある `CONTRIBUTING.md` を確認し、そこに定義された開発フロー（Issue起票、PR作成等）に従ってください。
 
 ## バージョン管理 (Git)
 - **禁止事項 (許可が必要)**:
