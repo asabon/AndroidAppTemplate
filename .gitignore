@@ -25,3 +25,6 @@ local.properties
 /.idea/copilot.data.migration.*
 
 app/release/*
+
+/.idea/markdown.xml
+/.vscode/
