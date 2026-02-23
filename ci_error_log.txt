@@ -1,0 +1,305 @@
+execute	Set up job	﻿2026-02-23T03:44:16.7173073Z Current runner version: '2.331.0'
+execute	Set up job	2026-02-23T03:44:16.7197804Z ##[group]Runner Image Provisioner
+execute	Set up job	2026-02-23T03:44:16.7198571Z Hosted Compute Agent
+execute	Set up job	2026-02-23T03:44:16.7199446Z Version: 20260123.484
+execute	Set up job	2026-02-23T03:44:16.7200031Z Commit: 6bd6555ca37d84114959e1c76d2c01448ff61c5d
+execute	Set up job	2026-02-23T03:44:16.7200626Z Build Date: 2026-01-23T19:41:17Z
+execute	Set up job	2026-02-23T03:44:16.7201283Z Worker ID: {6fd2bb21-5dd3-44ab-b67f-443b97dd8d9c}
+execute	Set up job	2026-02-23T03:44:16.7201904Z Azure Region: northcentralus
+execute	Set up job	2026-02-23T03:44:16.7202435Z ##[endgroup]
+execute	Set up job	2026-02-23T03:44:16.7203862Z ##[group]Operating System
+execute	Set up job	2026-02-23T03:44:16.7205089Z Ubuntu
+execute	Set up job	2026-02-23T03:44:16.7205564Z 24.04.3
+execute	Set up job	2026-02-23T03:44:16.7206183Z LTS
+execute	Set up job	2026-02-23T03:44:16.7206843Z ##[endgroup]
+execute	Set up job	2026-02-23T03:44:16.7207450Z ##[group]Runner Image
+execute	Set up job	2026-02-23T03:44:16.7208258Z Image: ubuntu-24.04
+execute	Set up job	2026-02-23T03:44:16.7209103Z Version: 20260201.15.1
+execute	Set up job	2026-02-23T03:44:16.7210536Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260201.15/images/ubuntu/Ubuntu2404-Readme.md
+execute	Set up job	2026-02-23T03:44:16.7213032Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260201.15
+execute	Set up job	2026-02-23T03:44:16.7214453Z ##[endgroup]
+execute	Set up job	2026-02-23T03:44:16.7218505Z ##[group]GITHUB_TOKEN Permissions
+execute	Set up job	2026-02-23T03:44:16.7221897Z Actions: write
+execute	Set up job	2026-02-23T03:44:16.7222613Z ArtifactMetadata: write
+execute	Set up job	2026-02-23T03:44:16.7223480Z Attestations: write
+execute	Set up job	2026-02-23T03:44:16.7224175Z Checks: write
+execute	Set up job	2026-02-23T03:44:16.7224811Z Contents: write
+execute	Set up job	2026-02-23T03:44:16.7225566Z Deployments: write
+execute	Set up job	2026-02-23T03:44:16.7226356Z Discussions: write
+execute	Set up job	2026-02-23T03:44:16.7227012Z Issues: write
+execute	Set up job	2026-02-23T03:44:16.7227790Z Metadata: read
+execute	Set up job	2026-02-23T03:44:16.7228467Z Models: read
+execute	Set up job	2026-02-23T03:44:16.7229271Z Packages: write
+execute	Set up job	2026-02-23T03:44:16.7229954Z Pages: write
+execute	Set up job	2026-02-23T03:44:16.7230731Z PullRequests: write
+execute	Set up job	2026-02-23T03:44:16.7231480Z RepositoryProjects: write
+execute	Set up job	2026-02-23T03:44:16.7232363Z SecurityEvents: write
+execute	Set up job	2026-02-23T03:44:16.7233148Z Statuses: write
+execute	Set up job	2026-02-23T03:44:16.7233785Z ##[endgroup]
+execute	Set up job	2026-02-23T03:44:16.7236506Z Secret source: Actions
+execute	Set up job	2026-02-23T03:44:16.7237553Z Prepare workflow directory
+execute	Set up job	2026-02-23T03:44:16.7634231Z Prepare all required actions
+execute	Set up job	2026-02-23T03:44:16.7692338Z Getting action download info
+execute	Set up job	2026-02-23T03:44:17.1640227Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+execute	Set up job	2026-02-23T03:44:17.2360106Z Download action repository 'ruby/setup-ruby@v1' (SHA:09a7688d3b55cf0e976497ff046b70949eeaccfd)
+execute	Set up job	2026-02-23T03:44:17.5949968Z Download action repository 'actions/cache@v4' (SHA:0057852bfaa89a56745cba8c7296529d2fc39830)
+execute	Set up job	2026-02-23T03:44:17.6770610Z Download action repository 'MeilCli/danger-action@v6' (SHA:1483db389d8b2b7c972ec47e90050de8f6b69d88)
+execute	Set up job	2026-02-23T03:44:18.1738720Z Complete job name: execute
+execute	Checkout repository	﻿2026-02-23T03:44:18.2604349Z ##[group]Run actions/checkout@v4
+execute	Checkout repository	2026-02-23T03:44:18.2605565Z with:
+execute	Checkout repository	2026-02-23T03:44:18.2606224Z   fetch-depth: 0
+execute	Checkout repository	2026-02-23T03:44:18.2606987Z   repository: asabon/AndroidAppTemplate
+execute	Checkout repository	2026-02-23T03:44:18.2608219Z   token: ***
+execute	Checkout repository	2026-02-23T03:44:18.2608900Z   ssh-strict: true
+execute	Checkout repository	2026-02-23T03:44:18.2609735Z   ssh-user: git
+execute	Checkout repository	2026-02-23T03:44:18.2610451Z   persist-credentials: true
+execute	Checkout repository	2026-02-23T03:44:18.2611236Z   clean: true
+execute	Checkout repository	2026-02-23T03:44:18.2611952Z   sparse-checkout-cone-mode: true
+execute	Checkout repository	2026-02-23T03:44:18.2612845Z   fetch-tags: false
+execute	Checkout repository	2026-02-23T03:44:18.2613556Z   show-progress: true
+execute	Checkout repository	2026-02-23T03:44:18.2614269Z   lfs: false
+execute	Checkout repository	2026-02-23T03:44:18.2614924Z   submodules: false
+execute	Checkout repository	2026-02-23T03:44:18.2615684Z   set-safe-directory: true
+execute	Checkout repository	2026-02-23T03:44:18.2616698Z ##[endgroup]
+execute	Checkout repository	2026-02-23T03:44:18.3652594Z Syncing repository: asabon/AndroidAppTemplate
+execute	Checkout repository	2026-02-23T03:44:18.3655212Z ##[group]Getting Git version info
+execute	Checkout repository	2026-02-23T03:44:18.3656606Z Working directory is '/home/runner/work/AndroidAppTemplate/AndroidAppTemplate'
+execute	Checkout repository	2026-02-23T03:44:18.3658714Z [command]/usr/bin/git version
+execute	Checkout repository	2026-02-23T03:44:18.3700569Z git version 2.52.0
+execute	Checkout repository	2026-02-23T03:44:18.3723045Z ##[endgroup]
+execute	Checkout repository	2026-02-23T03:44:18.3736169Z Temporarily overriding HOME='/home/runner/work/_temp/1dd3697f-f738-40cc-a285-43b60d339b3c' before making global git config changes
+execute	Checkout repository	2026-02-23T03:44:18.3741157Z Adding repository directory to the temporary git global config as a safe directory
+execute	Checkout repository	2026-02-23T03:44:18.3743338Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/AndroidAppTemplate/AndroidAppTemplate
+execute	Checkout repository	2026-02-23T03:44:18.3776312Z Deleting the contents of '/home/runner/work/AndroidAppTemplate/AndroidAppTemplate'
+execute	Checkout repository	2026-02-23T03:44:18.3779248Z ##[group]Initializing the repository
+execute	Checkout repository	2026-02-23T03:44:18.3783633Z [command]/usr/bin/git init /home/runner/work/AndroidAppTemplate/AndroidAppTemplate
+execute	Checkout repository	2026-02-23T03:44:18.3861249Z hint: Using 'master' as the name for the initial branch. This default branch name
+execute	Checkout repository	2026-02-23T03:44:18.3863011Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+execute	Checkout repository	2026-02-23T03:44:18.3865095Z hint: to use in all of your new repositories, which will suppress this warning,
+execute	Checkout repository	2026-02-23T03:44:18.3866385Z hint: call:
+execute	Checkout repository	2026-02-23T03:44:18.3867013Z hint:
+execute	Checkout repository	2026-02-23T03:44:18.3867861Z hint: 	git config --global init.defaultBranch <name>
+execute	Checkout repository	2026-02-23T03:44:18.3868935Z hint:
+execute	Checkout repository	2026-02-23T03:44:18.3870595Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+execute	Checkout repository	2026-02-23T03:44:18.3872223Z hint: 'development'. The just-created branch can be renamed via this command:
+execute	Checkout repository	2026-02-23T03:44:18.3873452Z hint:
+execute	Checkout repository	2026-02-23T03:44:18.3874277Z hint: 	git branch -m <name>
+execute	Checkout repository	2026-02-23T03:44:18.3875051Z hint:
+execute	Checkout repository	2026-02-23T03:44:18.3876525Z hint: Disable this message with "git config set advice.defaultBranchName false"
+execute	Checkout repository	2026-02-23T03:44:18.3878442Z Initialized empty Git repository in /home/runner/work/AndroidAppTemplate/AndroidAppTemplate/.git/
+execute	Checkout repository	2026-02-23T03:44:18.3881739Z [command]/usr/bin/git remote add origin https://github.com/asabon/AndroidAppTemplate
+execute	Checkout repository	2026-02-23T03:44:18.3907502Z ##[endgroup]
+execute	Checkout repository	2026-02-23T03:44:18.3908752Z ##[group]Disabling automatic garbage collection
+execute	Checkout repository	2026-02-23T03:44:18.3911151Z [command]/usr/bin/git config --local gc.auto 0
+execute	Checkout repository	2026-02-23T03:44:18.3935417Z ##[endgroup]
+execute	Checkout repository	2026-02-23T03:44:18.3936589Z ##[group]Setting up auth
+execute	Checkout repository	2026-02-23T03:44:18.3941314Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+execute	Checkout repository	2026-02-23T03:44:18.3970305Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+execute	Checkout repository	2026-02-23T03:44:18.4237360Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+execute	Checkout repository	2026-02-23T03:44:18.4265582Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+execute	Checkout repository	2026-02-23T03:44:18.4434047Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+execute	Checkout repository	2026-02-23T03:44:18.4461421Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+execute	Checkout repository	2026-02-23T03:44:18.4633416Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+execute	Checkout repository	2026-02-23T03:44:18.4660051Z ##[endgroup]
+execute	Checkout repository	2026-02-23T03:44:18.4661535Z ##[group]Fetching the repository
+execute	Checkout repository	2026-02-23T03:44:18.4670496Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/* +23d3478c74380448a4c9df1c3c6f2489c08527dd:refs/remotes/pull/99/merge
+execute	Checkout repository	2026-02-23T03:44:18.8591646Z From https://github.com/asabon/AndroidAppTemplate
+execute	Checkout repository	2026-02-23T03:44:18.8595143Z  * [new branch]      98-update-project-template               -> origin/98-update-project-template
+execute	Checkout repository	2026-02-23T03:44:18.8598558Z  * [new branch]      main                                     -> origin/main
+execute	Checkout repository	2026-02-23T03:44:18.8600369Z  * [new tag]         v0.1.0                                   -> v0.1.0
+execute	Checkout repository	2026-02-23T03:44:18.8601737Z  * [new ref]         23d3478c74380448a4c9df1c3c6f2489c08527dd -> pull/99/merge
+execute	Checkout repository	2026-02-23T03:44:18.8625217Z ##[endgroup]
+execute	Checkout repository	2026-02-23T03:44:18.8626741Z ##[group]Determining the checkout info
+execute	Checkout repository	2026-02-23T03:44:18.8628050Z ##[endgroup]
+execute	Checkout repository	2026-02-23T03:44:18.8631586Z [command]/usr/bin/git sparse-checkout disable
+execute	Checkout repository	2026-02-23T03:44:18.8666495Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+execute	Checkout repository	2026-02-23T03:44:18.8688522Z ##[group]Checking out the ref
+execute	Checkout repository	2026-02-23T03:44:18.8691956Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/99/merge
+execute	Checkout repository	2026-02-23T03:44:18.8765224Z Note: switching to 'refs/remotes/pull/99/merge'.
+execute	Checkout repository	2026-02-23T03:44:18.8766565Z 
+execute	Checkout repository	2026-02-23T03:44:18.8767441Z You are in 'detached HEAD' state. You can look around, make experimental
+execute	Checkout repository	2026-02-23T03:44:18.8769232Z changes and commit them, and you can discard any commits you make in this
+execute	Checkout repository	2026-02-23T03:44:18.8771174Z state without impacting any branches by switching back to a branch.
+execute	Checkout repository	2026-02-23T03:44:18.8772403Z 
+execute	Checkout repository	2026-02-23T03:44:18.8773006Z If you want to create a new branch to retain commits you create, you may
+execute	Checkout repository	2026-02-23T03:44:18.8774469Z do so (now or later) by using -c with the switch command. Example:
+execute	Checkout repository	2026-02-23T03:44:18.8775551Z 
+execute	Checkout repository	2026-02-23T03:44:18.8775887Z   git switch -c <new-branch-name>
+execute	Checkout repository	2026-02-23T03:44:18.8776453Z 
+execute	Checkout repository	2026-02-23T03:44:18.8776788Z Or undo this operation with:
+execute	Checkout repository	2026-02-23T03:44:18.8777306Z 
+execute	Checkout repository	2026-02-23T03:44:18.8777590Z   git switch -
+execute	Checkout repository	2026-02-23T03:44:18.8777978Z 
+execute	Checkout repository	2026-02-23T03:44:18.8778635Z Turn off this advice by setting config variable advice.detachedHead to false
+execute	Checkout repository	2026-02-23T03:44:18.8779893Z 
+execute	Checkout repository	2026-02-23T03:44:18.8780960Z HEAD is now at 23d3478 Merge b24f2401561690c9aae8eb20665c52eb3c2b8f7b into 1339bbc961b302355870112b00d2ae9732bbaa6f
+execute	Checkout repository	2026-02-23T03:44:18.8784072Z ##[endgroup]
+execute	Checkout repository	2026-02-23T03:44:18.8801522Z [command]/usr/bin/git log -1 --format=%H
+execute	Checkout repository	2026-02-23T03:44:18.8819601Z 23d3478c74380448a4c9df1c3c6f2489c08527dd
+execute	Setup Android	﻿2026-02-23T03:44:18.9075146Z Prepare all required actions
+execute	Setup Android	2026-02-23T03:44:18.9076212Z Getting action download info
+execute	Setup Android	2026-02-23T03:44:19.0282349Z Download action repository 'actions/setup-java@v4' (SHA:c1e323688fd81a25caa38c78aa6df2d33d3e20d9)
+execute	Setup Android	2026-02-23T03:44:19.5254787Z ##[group]Run ./.github/actions/setup-android
+execute	Setup Android	2026-02-23T03:44:19.5255700Z with:
+execute	Setup Android	2026-02-23T03:44:19.5256280Z   java-version: 21
+execute	Setup Android	2026-02-23T03:44:19.5256965Z   java-distribution: temurin
+execute	Setup Android	2026-02-23T03:44:19.5257700Z ##[endgroup]
+execute	Setup Android	2026-02-23T03:44:19.5462108Z ##[group]Run actions/setup-java@v4
+execute	Setup Android	2026-02-23T03:44:19.5462951Z with:
+execute	Setup Android	2026-02-23T03:44:19.5463550Z   distribution: temurin
+execute	Setup Android	2026-02-23T03:44:19.5464233Z   java-version: 21
+execute	Setup Android	2026-02-23T03:44:19.5464878Z   cache: gradle
+execute	Setup Android	2026-02-23T03:44:19.5465506Z   java-package: jdk
+execute	Setup Android	2026-02-23T03:44:19.5466159Z   check-latest: false
+execute	Setup Android	2026-02-23T03:44:19.5466825Z   server-id: github
+execute	Setup Android	2026-02-23T03:44:19.5467523Z   server-username: GITHUB_ACTOR
+execute	Setup Android	2026-02-23T03:44:19.5468324Z   server-password: GITHUB_TOKEN
+execute	Setup Android	2026-02-23T03:44:19.5469193Z   overwrite-settings: true
+execute	Setup Android	2026-02-23T03:44:19.5469980Z   job-status: success
+execute	Setup Android	2026-02-23T03:44:19.5470885Z   token: ***
+execute	Setup Android	2026-02-23T03:44:19.5471513Z ##[endgroup]
+execute	Setup Android	2026-02-23T03:44:19.7410120Z ##[group]Installed distributions
+execute	Setup Android	2026-02-23T03:44:19.7473933Z Resolved Java 21.0.10+7 from tool-cache
+execute	Setup Android	2026-02-23T03:44:19.7475701Z Setting Java 21.0.10+7 as the default
+execute	Setup Android	2026-02-23T03:44:19.7486981Z Creating toolchains.xml for JDK version 21 from temurin
+execute	Setup Android	2026-02-23T03:44:19.7554842Z Writing to /home/runner/.m2/toolchains.xml
+execute	Setup Android	2026-02-23T03:44:19.7556055Z 
+execute	Setup Android	2026-02-23T03:44:19.7556931Z Java configuration:
+execute	Setup Android	2026-02-23T03:44:19.7558276Z   Distribution: temurin
+execute	Setup Android	2026-02-23T03:44:19.7560239Z   Version: 21.0.10+7
+execute	Setup Android	2026-02-23T03:44:19.7561959Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.10-7/x64
+execute	Setup Android	2026-02-23T03:44:19.7563529Z 
+execute	Setup Android	2026-02-23T03:44:19.7564856Z ##[endgroup]
+execute	Setup Android	2026-02-23T03:44:19.7580298Z Creating settings.xml with server-id: github
+execute	Setup Android	2026-02-23T03:44:19.7581400Z Writing to /home/runner/.m2/settings.xml
+execute	Setup Android	2026-02-23T03:44:19.9319397Z Cache hit for: setup-java-Linux-x64-gradle-f23a830a73a73212eaed1f0f85e9597f7dcb633778884990f50b1e3c9189a685
+execute	Setup Android	2026-02-23T03:44:21.0607945Z Received 138412032 of 428451064 (32.3%), 132.0 MBs/sec
+execute	Setup Android	2026-02-23T03:44:22.0640974Z Received 385875968 of 428451064 (90.1%), 183.7 MBs/sec
+execute	Setup Android	2026-02-23T03:44:22.3598855Z Received 428451064 of 428451064 (100.0%), 177.7 MBs/sec
+execute	Setup Android	2026-02-23T03:44:22.3599598Z Cache Size: ~409 MB (428451064 B)
+execute	Setup Android	2026-02-23T03:44:22.3635711Z [command]/usr/bin/tar -xf /home/runner/work/_temp/9c179d37-226b-4a0a-b41f-2c6dc35c7a38/cache.tzst -P -C /home/runner/work/AndroidAppTemplate/AndroidAppTemplate --use-compress-program unzstd
+execute	Setup Android	2026-02-23T03:44:23.3757048Z Cache restored successfully
+execute	Setup Android	2026-02-23T03:44:23.4224443Z Cache restored from key: setup-java-Linux-x64-gradle-f23a830a73a73212eaed1f0f85e9597f7dcb633778884990f50b1e3c9189a685
+execute	Setup Android	2026-02-23T03:44:23.4375611Z ##[group]Run chmod +x gradlew
+execute	Setup Android	2026-02-23T03:44:23.4376019Z [36;1mchmod +x gradlew[0m
+execute	Setup Android	2026-02-23T03:44:23.4400693Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+execute	Setup Android	2026-02-23T03:44:23.4401076Z env:
+execute	Setup Android	2026-02-23T03:44:23.4401360Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.10-7/x64
+execute	Setup Android	2026-02-23T03:44:23.4401830Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.10-7/x64
+execute	Setup Android	2026-02-23T03:44:23.4402196Z ##[endgroup]
+execute	Run Inspection	﻿2026-02-23T03:44:23.4523593Z ##[group]Run ./gradlew ktlintCheck --no-daemon
+execute	Run Inspection	2026-02-23T03:44:23.4524012Z [36;1m./gradlew ktlintCheck --no-daemon[0m
+execute	Run Inspection	2026-02-23T03:44:23.4542790Z shell: /usr/bin/bash -e {0}
+execute	Run Inspection	2026-02-23T03:44:23.4543096Z env:
+execute	Run Inspection	2026-02-23T03:44:23.4543394Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.10-7/x64
+execute	Run Inspection	2026-02-23T03:44:23.4543854Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.10-7/x64
+execute	Run Inspection	2026-02-23T03:44:23.4544217Z ##[endgroup]
+execute	Run Inspection	2026-02-23T03:44:24.2077919Z 
+execute	Run Inspection	2026-02-23T03:44:24.2078606Z Welcome to Gradle 9.3.1!
+execute	Run Inspection	2026-02-23T03:44:24.2079380Z 
+execute	Run Inspection	2026-02-23T03:44:24.2079647Z Here are the highlights of this release:
+execute	Run Inspection	2026-02-23T03:44:24.2082281Z  - Test reporting improvements
+execute	Run Inspection	2026-02-23T03:44:24.2084236Z  - Error and warning improvements
+execute	Run Inspection	2026-02-23T03:44:24.2085006Z  - Build authoring improvements
+execute	Run Inspection	2026-02-23T03:44:24.2085360Z 
+execute	Run Inspection	2026-02-23T03:44:24.2085922Z For more details see https://docs.gradle.org/9.3.1/release-notes.html
+execute	Run Inspection	2026-02-23T03:44:24.2086408Z 
+execute	Run Inspection	2026-02-23T03:44:24.3097518Z To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.3.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+execute	Run Inspection	2026-02-23T03:44:25.5070636Z Daemon will be stopped at the end of the build 
+execute	Run Inspection	2026-02-23T03:44:33.3120879Z > Task :app:loadKtlintReporters
+execute	Run Inspection	2026-02-23T03:44:34.9074856Z > Task :app:runKtlintCheckOverKotlinScripts
+execute	Run Inspection	2026-02-23T03:44:35.0077826Z > Task :app:ktlintKotlinScriptCheck
+execute	Run Inspection	2026-02-23T03:44:35.0078345Z > Task :app:ktlintCheck
+execute	Run Inspection	2026-02-23T03:44:35.0078563Z 
+execute	Run Inspection	2026-02-23T03:44:35.0078681Z BUILD SUCCESSFUL in 11s
+execute	Run Inspection	2026-02-23T03:44:35.0079148Z 3 actionable tasks: 3 executed
+execute	Run Inspection	2026-02-23T03:44:35.0081048Z Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.3.1/userguide/configuration_cache_enabling.html
+execute	Setup Ruby, JRuby and TruffleRuby	﻿2026-02-23T03:44:35.1103946Z ##[group]Run ruby/setup-ruby@v1
+execute	Setup Ruby, JRuby and TruffleRuby	2026-02-23T03:44:35.1104224Z with:
+execute	Setup Ruby, JRuby and TruffleRuby	2026-02-23T03:44:35.1104409Z   ruby-version: 3.3
+execute	Setup Ruby, JRuby and TruffleRuby	2026-02-23T03:44:35.1104605Z   bundler-cache: false
+execute	Setup Ruby, JRuby and TruffleRuby	2026-02-23T03:44:35.1104920Z   token: ***
+execute	Setup Ruby, JRuby and TruffleRuby	2026-02-23T03:44:35.1105088Z env:
+execute	Setup Ruby, JRuby and TruffleRuby	2026-02-23T03:44:35.1105355Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.10-7/x64
+execute	Setup Ruby, JRuby and TruffleRuby	2026-02-23T03:44:35.1105809Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.10-7/x64
+execute	Setup Ruby, JRuby and TruffleRuby	2026-02-23T03:44:35.1106154Z ##[endgroup]
+execute	Setup Ruby, JRuby and TruffleRuby	2026-02-23T03:44:35.2831165Z ##[group]Modifying PATH
+execute	Setup Ruby, JRuby and TruffleRuby	2026-02-23T03:44:35.2836549Z Entries added to PATH to use selected Ruby:
+execute	Setup Ruby, JRuby and TruffleRuby	2026-02-23T03:44:35.2839599Z   /opt/hostedtoolcache/Ruby/3.3.10/x64/bin
+execute	Setup Ruby, JRuby and TruffleRuby	2026-02-23T03:44:35.2847478Z ##[endgroup]
+execute	Setup Ruby, JRuby and TruffleRuby	2026-02-23T03:44:35.2848298Z ##[group]Print Ruby version
+execute	Setup Ruby, JRuby and TruffleRuby	2026-02-23T03:44:35.2960748Z [command]/opt/hostedtoolcache/Ruby/3.3.10/x64/bin/ruby --version
+execute	Setup Ruby, JRuby and TruffleRuby	2026-02-23T03:44:35.8485655Z ruby 3.3.10 (2025-10-23 revision 343ea05002) [x86_64-linux]
+execute	Setup Ruby, JRuby and TruffleRuby	2026-02-23T03:44:35.8513502Z Took   0.57 seconds
+execute	Setup Ruby, JRuby and TruffleRuby	2026-02-23T03:44:35.8514490Z ##[endgroup]
+execute	Setup Ruby, JRuby and TruffleRuby	2026-02-23T03:44:35.8515993Z ##[group]Installing Bundler
+execute	Setup Ruby, JRuby and TruffleRuby	2026-02-23T03:44:35.8519974Z Using Bundler shipped with ruby-3.3.10
+execute	Setup Ruby, JRuby and TruffleRuby	2026-02-23T03:44:35.8521000Z Took   0.00 seconds
+execute	Setup Ruby, JRuby and TruffleRuby	2026-02-23T03:44:35.8521672Z ##[endgroup]
+execute	Cache Ruby gems	﻿2026-02-23T03:44:36.0078145Z ##[group]Run actions/cache@v4
+execute	Cache Ruby gems	2026-02-23T03:44:36.0078481Z with:
+execute	Cache Ruby gems	2026-02-23T03:44:36.0078752Z   path: vendor/bundle
+execute	Cache Ruby gems	2026-02-23T03:44:36.0079426Z   key: Linux-gems-6bfe677ea2b0745f4002f843025e99db0e91b072bab9c32eeb1badfca4fd7465
+execute	Cache Ruby gems	2026-02-23T03:44:36.0080468Z   restore-keys: Linux-gems-
+execute	Cache Ruby gems	Linux-gems-6bfe677ea2b0745f4002f843025e99db0e91b072bab9c32eeb1badfca4fd7465
+execute	Cache Ruby gems	Linux-gems-
+execute	Cache Ruby gems	
+execute	Cache Ruby gems	2026-02-23T03:44:36.0081318Z   enableCrossOsArchive: false
+execute	Cache Ruby gems	2026-02-23T03:44:36.0081711Z   fail-on-cache-miss: false
+execute	Cache Ruby gems	2026-02-23T03:44:36.0082075Z   lookup-only: false
+execute	Cache Ruby gems	2026-02-23T03:44:36.0082398Z   save-always: false
+execute	Cache Ruby gems	2026-02-23T03:44:36.0082730Z env:
+execute	Cache Ruby gems	2026-02-23T03:44:36.0083215Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.10-7/x64
+execute	Cache Ruby gems	2026-02-23T03:44:36.0084014Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.10-7/x64
+execute	Cache Ruby gems	2026-02-23T03:44:36.0084595Z ##[endgroup]
+execute	Cache Ruby gems	2026-02-23T03:44:36.2462042Z Cache hit for: Linux-gems-6bfe677ea2b0745f4002f843025e99db0e91b072bab9c32eeb1badfca4fd7465
+execute	Cache Ruby gems	2026-02-23T03:44:36.8597487Z Received 12483717 of 12483717 (100.0%), 25.7 MBs/sec
+execute	Cache Ruby gems	2026-02-23T03:44:36.8598076Z Cache Size: ~12 MB (12483717 B)
+execute	Cache Ruby gems	2026-02-23T03:44:36.8623609Z [command]/usr/bin/tar -xf /home/runner/work/_temp/6a01fffb-5e55-4a37-b075-7caa7a3df3ab/cache.tzst -P -C /home/runner/work/AndroidAppTemplate/AndroidAppTemplate --use-compress-program unzstd
+execute	Cache Ruby gems	2026-02-23T03:44:36.9249944Z Cache restored successfully
+execute	Cache Ruby gems	2026-02-23T03:44:36.9340362Z Cache restored from key: Linux-gems-6bfe677ea2b0745f4002f843025e99db0e91b072bab9c32eeb1badfca4fd7465
+execute	Run MeilCli/danger-action@v6	﻿2026-02-23T03:44:36.9431388Z ##[group]Run MeilCli/danger-action@v6
+execute	Run MeilCli/danger-action@v6	2026-02-23T03:44:36.9431671Z with:
+execute	Run MeilCli/danger-action@v6	2026-02-23T03:44:36.9431879Z   plugins_file: ci/ktlint/Gemfile
+execute	Run MeilCli/danger-action@v6	2026-02-23T03:44:36.9432119Z   install_path: vendor/bundle
+execute	Run MeilCli/danger-action@v6	2026-02-23T03:44:36.9432346Z   danger_file: ci/ktlint/Dangerfile
+execute	Run MeilCli/danger-action@v6	2026-02-23T03:44:36.9432594Z   danger_id: danger-pr-ktlint
+execute	Run MeilCli/danger-action@v6	2026-02-23T03:44:36.9432819Z   danger_version: >= 6.0.0
+execute	Run MeilCli/danger-action@v6	2026-02-23T03:44:36.9433038Z   danger_version_file: .tool-versions
+execute	Run MeilCli/danger-action@v6	2026-02-23T03:44:36.9433292Z   danger_version_file_format: asdf
+execute	Run MeilCli/danger-action@v6	2026-02-23T03:44:36.9433528Z   fail_on_stderr_when_bundler: false
+execute	Run MeilCli/danger-action@v6	2026-02-23T03:44:36.9433762Z   fail_on_stderr_when_danger: false
+execute	Run MeilCli/danger-action@v6	2026-02-23T03:44:36.9433986Z env:
+execute	Run MeilCli/danger-action@v6	2026-02-23T03:44:36.9434254Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.10-7/x64
+execute	Run MeilCli/danger-action@v6	2026-02-23T03:44:36.9434691Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.10-7/x64
+execute	Run MeilCli/danger-action@v6	2026-02-23T03:44:36.9435300Z   DANGER_GITHUB_API_TOKEN: ***
+execute	Run MeilCli/danger-action@v6	2026-02-23T03:44:36.9435528Z ##[endgroup]
+execute	Run MeilCli/danger-action@v6	2026-02-23T03:44:36.9826550Z [command]/opt/hostedtoolcache/Ruby/3.3.10/x64/bin/bundle install --path=vendor/bundle --jobs 4 --retry 3
+execute	Run MeilCli/danger-action@v6	2026-02-23T03:44:38.2601725Z [DEPRECATED] The `--path` flag is deprecated because it relies on being remembered across bundler invocations, which bundler will no longer do in future versions. Instead please use `bundle config set path 'vendor/bundle'`, and stop using this flag
+execute	Run MeilCli/danger-action@v6	2026-02-23T03:44:39.9592646Z Fetching gem metadata from https://rubygems.org/.............
+execute	Run MeilCli/danger-action@v6	2026-02-23T03:44:39.9971424Z Resolving dependencies...
+execute	Run MeilCli/danger-action@v6	2026-02-23T03:44:40.2984967Z Bundle complete! 2 Gemfile dependencies, 43 gems now installed.
+execute	Run MeilCli/danger-action@v6	2026-02-23T03:44:40.2987207Z Bundled gems are installed into `./vendor/bundle`
+execute	Run MeilCli/danger-action@v6	2026-02-23T03:44:40.3284130Z [command]/opt/hostedtoolcache/Ruby/3.3.10/x64/bin/bundle exec danger --dangerfile=ci/ktlint/Dangerfile --danger_id=danger-pr-ktlint
+execute	Run MeilCli/danger-action@v6	2026-02-23T03:44:42.7184053Z You used `puts` in your Dangerfile. To print out text to GitHub use `message` instead
+execute	Run MeilCli/danger-action@v6	2026-02-23T03:44:42.7185337Z Reporting: app/build/reports/ktlint/ktlintKotlinScriptCheck/ktlintKotlinScriptCheck.xml
+execute	Post Cache Ruby gems	﻿2026-02-23T03:44:42.8749606Z Post job cleanup.
+execute	Post Cache Ruby gems	2026-02-23T03:44:42.9948884Z Cache hit occurred on the primary key Linux-gems-6bfe677ea2b0745f4002f843025e99db0e91b072bab9c32eeb1badfca4fd7465, not saving cache.
+execute	Post Setup Android	﻿2026-02-23T03:44:43.0025452Z Post job cleanup.
+execute	Post Setup Android	2026-02-23T03:44:43.0068749Z Post job cleanup.
+execute	Post Setup Android	2026-02-23T03:44:43.1595680Z Cache hit occurred on the primary key setup-java-Linux-x64-gradle-f23a830a73a73212eaed1f0f85e9597f7dcb633778884990f50b1e3c9189a685, not saving cache.
+execute	Post Checkout repository	﻿2026-02-23T03:44:43.1693721Z Post job cleanup.
+execute	Post Checkout repository	2026-02-23T03:44:43.2570107Z [command]/usr/bin/git version
+execute	Post Checkout repository	2026-02-23T03:44:43.2614708Z git version 2.52.0
+execute	Post Checkout repository	2026-02-23T03:44:43.2654337Z Temporarily overriding HOME='/home/runner/work/_temp/e76ea84a-ddb2-4b13-b083-e8f83c408b48' before making global git config changes
+execute	Post Checkout repository	2026-02-23T03:44:43.2655556Z Adding repository directory to the temporary git global config as a safe directory
+execute	Post Checkout repository	2026-02-23T03:44:43.2660064Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/AndroidAppTemplate/AndroidAppTemplate
+execute	Post Checkout repository	2026-02-23T03:44:43.2690485Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+execute	Post Checkout repository	2026-02-23T03:44:43.2716943Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+execute	Post Checkout repository	2026-02-23T03:44:43.2894286Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+execute	Post Checkout repository	2026-02-23T03:44:43.2911217Z http.https://github.com/.extraheader
+execute	Post Checkout repository	2026-02-23T03:44:43.2923680Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+execute	Post Checkout repository	2026-02-23T03:44:43.2949391Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+execute	Post Checkout repository	2026-02-23T03:44:43.3121392Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+execute	Post Checkout repository	2026-02-23T03:44:43.3148647Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+execute	Complete job	﻿2026-02-23T03:44:43.3420415Z Cleaning up orphan processes
