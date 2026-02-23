@@ -42,8 +42,13 @@ jobs:
         run: |
           ./gradlew assembleRelease --warning-mode all > build.log
 
+      - name: Display build log on failure
+        if: failure()
+        run: cat build.log
+        shell: bash
+
       - name: Analyze Build Log
-        uses: asabon/android-build-log-analyzer@v0.0.5
+        uses: asabon/android-build-log-analyzer@v0.0.6
         if: always()
         with:
           log-file-path: 'build.log'
