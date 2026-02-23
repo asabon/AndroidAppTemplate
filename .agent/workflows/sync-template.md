@@ -6,6 +6,11 @@ description: Android Studio テンプレート (new_template) からの最新構
 
 ## 実行手順
 
+### 0. 準備状況の確認 (最優先)
+作業を開始する前に、必ず `new_template` ディレクトリが存在し、中身が配置されているか確認してください。
+- `ls new_template` を実行し、ファイルが存在することを確認します。
+- **重要**: `new_template` が存在しない場合、または中身が空の場合は、直ちに作業を中断し、ユーザーに「`new_template` ディレクトリに最新のテンプレートを配置してください」と伝えてください。
+
 ### 1. 事前調査
 `new_template` ディレクトリとプロジェクトルートの差分を確認し、更新が必要な箇所を特定します。特に以下のファイルに注目してください。
 - `gradle/wrapper/gradle-wrapper.properties`
