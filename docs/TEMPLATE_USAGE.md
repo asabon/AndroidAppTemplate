@@ -48,33 +48,45 @@ chmod +x scripts/setup-labels.sh
 ./scripts/setup-labels.ps1
 ```
 
-### 4. ビルド確認
+### 4. Git Hook の登録 (推奨)
+
+コミット前やプッシュ前に自動でバリデーションを行えるよう、`.hooks/` 内のスクリプトを登録します。
+
+```bash
+# Bash (macOS/Linux)
+chmod +x scripts/setup-hooks.sh
+./scripts/setup-hooks.sh
+
+# PowerShell (Windows)
+./scripts/setup-hooks.ps1
+```
+
+### 6. ビルド確認
 ```bash
 ./gradlew assembleDebug
 ```
 
-### 5. アシスタントとの開発サイクル（推奨）
+## 3. アシスタントとの開発サイクル（推奨）
 Antigravity を使用している場合は、以下のフローで役割を分担しながら開発を進めることを推奨します。
 
 | ステップ | アクション | 担当 | 備考 |
 | :--- | :--- | :--- | :--- |
-| **1. 開始** | `/init` または `/resume` を実行 | **ユーザー** | 初回は `/init`、2回目以降は `/resume` |
-| **2. 計画** | 要望を伝えて `task.md` と Issue を作成 | ユーザー / **AI** | `/issue_new` 相当 |
-| **3. 準備** | 作業用ブランチ（`[Issue番号]-名前`）を作成しチェックアウト | **AI** | `gh issue develop` |
-| **4. 実装** | 実装と検証（ビルド・Lint）を行う | **AI** | `coding.md` 遵守 |
-| **5. 報告** | `task.md` を完了にし、進捗を保存して報告 | **AI** | |
-| **6. 確認** | 内容を確認し **コミット・プッシュ** | **ユーザー** | `task.md` の完了も同時に push |
-| **7. 申請** | **プルリクエスト (PR)** を作成 | **AI** | `/complete` ワークフロー開始 |
-| **8. 承認** | PR を確認し **マージ** | **ユーザー** | |
-| **9. 整理** | **後片付け** (ブランチ削除等) | **AI** (Navi) | `main` へ復帰 |
+| **1. 開始** | `/resume` を実行 | **ユーザー** | 常に最新のコンテキスト（Issue/ブランチ）から再開 |
+| **2. 計画** | 要望を伝え `task.md` (Brain) を作成 | ユーザー / **AI** | `implementation_plan.md` 等で合意 |
+| **3. 準備** | 作業用ブランチを作成しチェックアウト | **AI** | `gh issue develop` |
+| **4. 実装** | 実装と検証（ビルド・Lint）を行う | **AI** | `04_android.md` 遵守 |
+| **5. 報告** | `task.md` を更新し、進捗を保存して報告 | **AI** | `/save` コマンドを使用 |
+| **6. 確認** | 内容を確認し **コミット・プッシュ** | **ユーザー** | AI に依頼も可能 |
+| **7. 申請** | **プルリクエスト (PR)** を作成 | **AI** | |
+| **8. 承認** | PR を確認し **マージ** | **ユーザー** | ブラウザまたは `gh pr merge` |
+| **9. 整理** | **クリーンアップ** (ブランチ削除等) | **AI** | `/cleanup` コマンドを使用 |
 
-- **セッション管理 (いずれか一方を開始時に実行)**:
-  - `/init`: プロジェクトルールの初回読み込み（新しいチャットセッションの開始時）。
-  - `/resume`: 前回中断した作業の再開（2回目以降のプロジェクト開始時。**`/init` は不要**です）。
-- **開発サイクル支援 (主に AI が状況に応じて実行する)**:
-  - `/save`: 現在の状態を `task.md` に保存（Step 5 等で AI が自動実行）。
-  - `/complete`: PR 作成からマージ後の整理までをナビゲート（Step 7-9 で AI が使用）。
-  - `/issue_new` / `/issue_comment`: GitHub Issue の起票や更新。
+- **セッション管理**:
+  - `/resume`: 前回の作業状態を Issue から特定し、ブランチの切り替えや `task.md` の復元を自動で行います。
+- **進捗と保存**:
+  - `/save`: 現在の作業状況を要約し、GitHub Issue に「栞（チェックポイント）」としてコメント投稿します。
+- **後処理**:
+  - `/cleanup`: マージ済みのブランチ削除、`working` ラベルの除去、`main` への復帰を一括で行います。
 
 ---
 
@@ -82,15 +94,16 @@ Antigravity を使用している場合は、以下のフローで役割を分�
 
 ```text
 + .agent/
-  + rules/          # 開発、Git、GitHub、タスク管理の詳細ルール
-  + workflows/      # AI アシスタント用コマンド（/init, /save 等）
+  + rules/          # 開発、Git、GitHub、Android の各詳細ルール
+  + workflows/      # AI アシスタント用コマンド（/save, /resume, /cleanup）
 + .github/
   + workflows/      # CI/CD ワークフロー定義 (GitHub Actions)
++ .hooks/           # Git Hooks (pre-commit, pre-push)
 + app/              # Android アプリ本体
 + ci/               # CI/CD 各種ツールの詳細設定・ドキュメント
 + docs/
-  + progress/
-    + task.md       # 進捗管理（唯一の真実：Source of Truth）
+  + 99_progress/
+    + roadmap.md    # プロジェクト全体のロードマップ (Source of Truth)
 ```
 
 ---

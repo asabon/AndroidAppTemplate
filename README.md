@@ -25,6 +25,11 @@ cd [repository-name]
 
 # ビルド確認
 ./gradlew assembleDebug
+
+# Git Hook の登録 (推奨)
+# .hooks/ 内のスクリプトを Git Hook として有効化します。
+./scripts/setup-hooks.ps1  # Windows
+./scripts/setup-hooks.sh   # Mac / Linux
 ```
 
 ## アーキテクチャ
