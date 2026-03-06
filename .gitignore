@@ -28,3 +28,4 @@ app/release/*
 
 /.idea/markdown.xml
 /.vscode/
+/temp/

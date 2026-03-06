@@ -7,20 +7,16 @@ set -e
 
 # ラベル定義: "名前:カラー:説明"
 LABELS=(
-  "major:FF5733:主要なバージョンアップ（破壊的変更）"
-  "breaking:FF5733:破壊的変更"
-  "minor:33FF57:機能追加（マイナーバージョンアップ）"
-  "patch:3357FF:不具合修正・改善（パッチバージョンアップ）"
-  "feature:a2eeef:新機能"
-  "enhancement:a2eeef:機能改善"
-  "fix:d73a4a:不具合修正"
-  "bug:d73a4a:不具合報告"
-  "chore:c5def5:雑務・ビルド関連"
+  "enhancement:a2eeef:新機能・機能改善"
+  "bug:d73a4a:不具合報告・修正"
   "documentation:0075ca:ドキュメント更新"
-  "maintenance:fbca04:メンテナンス"
   "refactor:1d76db:リファクタリング"
-  "style:c2e0c4:コードスタイル"
+  "chore:c5def5:雑務・ビルド関連"
   "test:006b75:テスト追加・修正"
+  "major:0e8a16:メジャーバージョンアップ（破壊的変更あり）"
+  "minor:fbca04:マイナーバージョンアップ（機能追加）"
+  "breaking:d93f0b:破壊的変更"
+  "working:fef2c0:現在作業中"
 )
 
 echo "Checking and creating GitHub Labels for Release Drafter..."
