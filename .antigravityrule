@@ -27,7 +27,7 @@ Failure to include this phrase at the very beginning of your response is UNACCEP
   - すべての変更は必ず作業用ブランチを作成し、Pull Request (PR) を経由してください。
   - 操作前に必ず `& git branch --show-current` を実行し、現在地が `main` でないことを確認してください。
 - **実装完了後の必須検証**:
-  - 実装作業が完了した後は、必ず `04_android.md` に記載の検証コマンド (assembleDebug, testDebugUnitTest, ktlintFormat 等) を実行し、すべてパスすることを確認してください。
+  - 実装作業が完了した後は、必ず各プロジェクト固有の検証手順（Androidであれば `04_android.md` 参照）を実行し、すべてパスすることを確認してください。
 
 ### 3. 分割ルールの参照ディレクトリ (Rule Indexes)
 
