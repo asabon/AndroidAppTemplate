@@ -32,8 +32,14 @@
        ```
 3. アプリの `build.gradle.kts` に以下を追加する。
    ```kotlin
+   import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+   import org.jlleitschuh.gradle.ktlint.reporter.ReporterType
+   import java.io.FileInputStream // ← これを追加★
+   // ... 省略
+
    android {
      // ... 省略
+     // ここから追加★
      signingConfigs {
        create("release") {
          // keystore.properties から情報を読み込む
@@ -56,16 +62,19 @@
          }
        }
      }
+     // ここまで追加★
      // ... 省略
      buildTypes {
        // ... 省略
        release {
+         // ここから追加★
          val propsFile = rootProject.file("keystore.properties")
          if (propsFile.exists()) {
            signingConfig = signingConfigs.getByName("release")
          } else {
            println("⚠️ keystore.properties not found, skipping signingConfig assignment")
          }
+         // ここまで追加★
          // ... 省略
        }
      }
