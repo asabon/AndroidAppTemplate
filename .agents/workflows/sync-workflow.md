@@ -13,7 +13,7 @@ AIエージェントは、以下の手順で更新作業を慎重かつ効率的
    - `git fetch upstream-sync main` を実行し、テンプレートの最新の差分情報を取得してください。
 
 3. **差分の分析と要約（インテリジェント・プロポーザル）**
-   - `git diff upstream-sync/main -- .antigravityrule .agent/ scripts/ .github/ .vscode/` を実行し、主要なルールや設定ファイルの差分を確認してください。
+   - `git diff upstream-sync/main -- .antigravityrule .agents/ scripts/ .github/ .vscode/` を実行し、主要なルールや設定ファイルの差分を確認してください。
    - 抽出した差分を AI が精読し、以下の内容をユーザーに要約して提示してください：
      - **変更があったファイルと、その大まかな内容（例：規約の追加、バグ修正、機能改善）**
      - **適用を推奨するもの、および現在のカスタマイズと競合する可能性があるものの分類**

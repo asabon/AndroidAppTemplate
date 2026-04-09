@@ -6,7 +6,7 @@
 - [x] 進捗管理用ファイルの作成 (docs/progress/task.md)
 - [x] Antigravity 基本ワークフローの作成 (`/init`, `/save`, `/resume`)
 - [x] README.md の更新 (リポジトリテンプレートおよび AI 連携の説明)
-- [x] AGENT.md のモジュール化と日本語化 (.agent/rules/ への分割)
+- [x] AGENT.md のモジュール化と日本語化 (.agents/rules/ への分割)
 - [x] 検証ルールの詳細化 (ビルド確認と ktlintFormat の義務化)
 
 ## フェーズ 2: CI/CD ワークフローの改善 [x]
@@ -32,7 +32,7 @@
 - **GitHub 連携ワークフロー**:
     - `/issue_new` (Issue 起票), `/issue_comment` (コメント追記・本文更新) を導入し、テンプレート (`.github/ISSUE_TEMPLATE/task.md`) を活用した Issue 駆動開発を強化。
 - **ディレクトリ権限**:
-    - `.agent/rules/` は書き込み制限があるが、`.agent/workflows/` はエージェントによる直接編集が可能であることを確認。
+    - `.agents/rules/` は書き込み制限があるが、`.agents/workflows/` はエージェントによる直接編集が可能であることを確認。
 
 ## フェーズ 3: 仕上げと検証 [x]
 - [x] 全ワークフローの動作確認（ユーザーによる最終検証完了）
