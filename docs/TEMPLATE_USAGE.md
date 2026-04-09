@@ -93,7 +93,7 @@ Antigravity を使用している場合は、以下のフローで役割を分�
 ## ディレクトリ構成
 
 ```text
-+ .agent/
++ .agents/
   + rules/          # 開発、Git、GitHub、Android の各詳細ルール
   + workflows/      # AI アシスタント用コマンド（/save, /resume, /cleanup）
 + .github/
