@@ -1,12 +1,8 @@
 name: Release Drafter
 
 on:
-  push:
-    branches:
-      - main
-  # pull_request:
-  #   types: [opened, reopened, synchronize]
-  # PR trigger is optional for label verification, but main trigger is essential for draft creation.
+  pull_request:
+    types: [closed]
 
 permissions:
   contents: write
@@ -14,9 +10,7 @@ permissions:
 
 jobs:
   update_release_draft:
-    permissions:
-      contents: write  # for creating releases
-      pull-requests: read # for reading PR details
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - uses: release-drafter/release-drafter@v6
