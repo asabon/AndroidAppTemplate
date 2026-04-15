@@ -10,7 +10,7 @@
 
 | 警告内容 (ID) | 対象ファイル/箇所 | 理由 (Why) | 解除条件 (When) | 登録日 |
 | :--- | :--- | :--- | :--- | :--- |
-| (例) GradleDependency | libs.versions.toml | XXX 0.9.8 は既存のビルド環境と競合しビルドエラーになるため | XXX 0.9.9 以降がリリースされ、競合が解消されたら | 2026/04/10 |
+| OldTargetApi | app/build.gradle.kts | Android 17 (API 37) が Beta 版であるため、安定性を重視して採用を見送り | API 37 が正式リリースされたら | 2026/04/16 |
 
 ---
 

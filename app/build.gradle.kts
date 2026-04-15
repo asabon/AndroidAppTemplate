@@ -65,6 +65,7 @@ android {
         htmlReport = true
         checkReleaseBuilds = false
         abortOnError = false
+        disable += "OldTargetApi"
     }
 }
 
