@@ -10,6 +10,10 @@
   - `androidx-core-ktx` -> `libs.androidx.core.ktx`
   - `androidx-compose-ui` -> `libs.androidx.compose.ui`
 
+### Gradle Wrapper の更新とチェックサム
+- **問題**: `./gradlew wrapper --gradle-version <version>` を実行した際、`gradle-wrapper.properties` に `distributionSha256Sum` が既に存在していると、新しいバージョンのチェックサムが提供されない限りタスクが失敗します。
+- **解決策**: 新しいバージョンの SHA-256 チェックサムを公式サイトで確認し、手動で `gradle-wrapper.properties` を更新するか、コマンドライン引数 `--gradle-distribution-sha256-sum` で指定してください。
+
 ### 推奨バージョンへの更新 (Lint 警告の解消)
 - **問題**: `lintDebug` を実行した際、古いバージョンのライブラリが "Obsolete Gradle Dependency" として警告されることがあります。
 - **解決策**: 本スキルの「警告ゼロ」基準を満たすため、Lint レポート (`app/build/reports/lint-results-debug.html`) を確認し、推奨されている最新安定版へ `libs.versions.toml` を更新してください。
