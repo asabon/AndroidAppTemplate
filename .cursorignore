@@ -1,0 +1,11 @@
+# Cursor のインデックス対象から外す（生成物・キャッシュ）
+# 正本のソースや .agents は含めない
+
+**/build/
+**/.gradle/
+.gradle/
+**/.cxx/
+**/captures/
+.externalNativeBuild/
+
+local.properties

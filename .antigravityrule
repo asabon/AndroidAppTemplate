@@ -29,7 +29,13 @@ Failure to include this phrase at the very beginning of your response is UNACCEP
 - **実装完了後の必須検証**:
   - 実装作業が完了した後は、必ず各プロジェクト固有の検証手順（Androidであれば `04_android.md` 参照）を実行し、すべてパスすることを確認してください。
 
-### 3. 分割ルールの参照ディレクトリ (Rule Indexes)
+### 3. Cursor との共通運用（正本は一箇所）
+
+- **詳細ルールの正本**は引き続き **`.agents/rules/`**（このファイルの「分割ルール」一覧と同じ）。
+- **Cursor** を使う場合は、リポジトリ直下の **`AGENTS.md`** が索引として機能する（内容の重複を避けるため、長文の手順は `.agents/rules/` にのみ置く）。
+- `.agents/` の全体説明は **`.agents/README.md`** を参照。
+
+### 4. 分割ルールの参照ディレクトリ (Rule Indexes)
 
 具体的な手順や制約は、以下の専用ファイルに分割されています。
 **該当するフェーズ・操作が発生する前に、必ず対象のファイルを `view_file` で読み込んでください。**
