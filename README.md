@@ -4,7 +4,7 @@
 
 > [!TIP]
 > **テンプレートの利用方法について**
-> このリポジトリ自体のセットアップ方法や使い方については、[docs/TEMPLATE_USAGE.md](docs/TEMPLATE_USAGE.md) を参照してください。
+> このリポジトリ自体のセットアップ方法や使い方については、[docs/android_app_template_guide/README.md](docs/android_app_template_guide/README.md) を参照してください。
 
 ## 概要
 
@@ -17,6 +17,13 @@
 - 機能 3
 
 ## 開発環境のセットアップ
+
+### AI アシスタント（Cursor / Antigravity）
+
+- **共通の詳細ルール**: [`.agents/rules/`](.agents/rules/)
+- **Cursor**: ルートの [`AGENTS.md`](AGENTS.md) と [`.cursor/rules/`](.cursor/rules/)
+- **Antigravity**: [`.antigravityrule`](.antigravityrule)
+- 全体の説明: [`.agents/README.md`](.agents/README.md)
 
 ```bash
 # クローン

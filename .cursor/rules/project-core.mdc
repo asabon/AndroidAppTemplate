@@ -1,0 +1,14 @@
+---
+description: 全セッション共通の前提（正本は .agents/rules／AGENTS.md）
+alwaysApply: true
+---
+
+# AndroidAppTemplate — エージェント向け要約
+
+- **正本**: 手順・規約は **`.agents/rules/`**（単一の参照元）。作業フェーズに応じて該当ファイルを読む。
+- **入口**: 索引と不変の制約はリポジトリ直下の **`AGENTS.md`** にまとめてある。
+- **言語**: ユーザー向けの説明は **日本語** を優先する。
+- **`main` 禁止**: `main` へ直接 commit / push しない。ブランチと PR 経由。
+- **検証**: 実装完了後、Android は **`04_android.md`** の手順を満たす。
+
+読む順の目安: タスク開始 → `01_workflow.md` →（Git）`02_git.md` →（GitHub）`03_github.md` →（実装）`04_android.md`。

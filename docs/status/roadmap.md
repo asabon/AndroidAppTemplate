@@ -62,7 +62,7 @@
     - 具体的次の一手: 新しい改善要望または機能開発の指示待ち。
 
 ## フェーズ 7: ユーザビリティ向上 [/]
-- [x] テンプレート説明用 README の分離 (README.md -> docs/TEMPLATE_USAGE.md)
+- [x] テンプレート説明用 README の分離 (README.md -> docs/android_app_template_guide/README.md)
 
 ## フェーズ 8: ルール厳格化 [/]
 - [x] ブランチ命名規則の強化 (日本語禁止の明文化とAlert化)

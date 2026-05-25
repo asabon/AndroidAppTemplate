@@ -1,17 +1,19 @@
 [![build](https://github.com/asabon/AndroidAppTemplate/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/asabon/AndroidAppTemplate/actions/workflows/build.yml)
 
-# AndroidAppTemplate
+# Android アプリ用リポジトリテンプレート — 利用ガイド
 
 ## 概要
 
 このリポジトリは、Android アプリ開発を開始する際の **GitHub リポジトリテンプレート** です。
-あらかじめ最適な CI/CD 環境が組み込まれており、さらに AI アシスタント（Antigravity）を利用している開発者向けの便利な設定も統合されています。
+あらかじめ最適な CI/CD 環境が組み込まれており、さらに AI アシスタント向けのルール（**Antigravity / Cursor 両対応**）も統合されています。詳細手順の正本は **`.agents/rules/`** に集約し、ツール別の入口だけを分けています。
+
+テンプレートの使い方・初期セットアップのドキュメントは、この **`docs/android_app_template_guide/`** 以下に集約します（本ファイルが入口です）。
 
 ## 主な特徴
 
 - **CI/CD 標準装備**: Lint チェック、ユニットテスト、ビルドチェックが設定済み。
 - **品質管理**: Ktlint, Android Lint によるコード品質の維持が容易です。
-- **AI アシスタント対応**: Antigravity 向けの設定が同梱されており、利用する場合は AI とスムーズに連携して開発を進められます。
+- **AI アシスタント対応**: 共通ルールは `.agents/rules/`。**Cursor** はルートの `AGENTS.md` と `.cursor/rules/`、**Antigravity** は `.antigravityrule` から参照します。
 
 ---
 
@@ -61,13 +63,18 @@ chmod +x scripts/setup-hooks.sh
 ./scripts/setup-hooks.ps1
 ```
 
-### 6. ビルド確認
+### 5. ビルド確認
 ```bash
 ./gradlew assembleDebug
 ```
 
-## 3. アシスタントとの開発サイクル（推奨）
-Antigravity を使用している場合は、以下のフローで役割を分担しながら開発を進めることを推奨します。
+## アシスタントとの開発サイクル（推奨）
+
+**Antigravity** では `/resume` などのショートカットと `.antigravityrule` が中心、**Cursor** では `AGENTS.md` と `.cursor/rules/project-core.mdc` を入口に、**同一の** `.agents/rules/`（ワークフロー・Git・GitHub・Android）に従います。
+
+`task.md` や `/save` `/resume` `/cleanup` の具体的な振る舞いは [`.agents/workflows/`](../../.agents/workflows/) および [`.agents/rules/01_workflow.md`](../../.agents/rules/01_workflow.md) を正とします。
+
+いずれのツールでも、以下のフローで役割を分担しながら開発を進めることを推奨します（Antigravity でスラッシュコマンドを使う場合の例）。
 
 | ステップ | アクション | 担当 | 備考 |
 | :--- | :--- | :--- | :--- |
@@ -93,16 +100,22 @@ Antigravity を使用している場合は、以下のフローで役割を分�
 ## ディレクトリ構成
 
 ```text
++ AGENTS.md         # Cursor 向け入口（索引。詳細の正本は .agents/rules/）
++ .cursor/
+  + rules/          # Cursor 用の短い常時ルール（project-core.mdc）
 + .agents/
-  + rules/          # 開発、Git、GitHub、Android の各詳細ルール
+  + rules/          # 開発、Git、GitHub、Android の各詳細ルール（正本）
   + workflows/      # AI アシスタント用コマンド（/save, /resume, /cleanup）
++ .antigravityrule  # Antigravity 用索引・追加入力
 + .github/
   + workflows/      # CI/CD ワークフロー定義 (GitHub Actions)
 + .hooks/           # Git Hooks (pre-commit, pre-push)
 + app/              # Android アプリ本体
 + ci/               # CI/CD 各種ツールの詳細設定・ドキュメント
 + docs/
-  + 99_progress/
+  + android_app_template_guide/
+    + README.md     # 本ガイド（テンプレートの使い方）
+  + status/
     + roadmap.md    # プロジェクト全体のロードマップ (Source of Truth)
 ```
 
@@ -127,7 +140,7 @@ Antigravity を使用している場合は、以下のフローで役割を分�
 
 ## 開発・リリース運用について
 
-詳細なバージョン管理ルールやリリースの手順については [CONTRIBUTING.md](CONTRIBUTING.md) を参照してください。
+詳細なバージョン管理ルールやリリースの手順については [CONTRIBUTING.md](../../CONTRIBUTING.md) を参照してください。
 
 ---
 
